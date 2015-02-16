@@ -17,9 +17,9 @@
 
 {% block content %}
   <article class="intro">
-    <p>I am a recent Computer Science graduate from <a href>Lakehead University</a>. In my free time I like to start <a href>cool projects</a> and contribute to <a href>open source</a>.</p>
-    <p>And I share <a href>my thoughts</a> about it.</p>
-    <p>This site was created using <a href>htmd</a> a static site generator I created using Python. Usually I create Single Page Applications, however this site doesn't use any JavaScript. All of the functionality is done with good old HTML and CSS. The off screen menu uses the :target CSS selector.</p>
+    <p>I am a recent Computer Science graduate from <a href="https://www.lakeheadu.ca/">Lakehead University</a>. In my free time I like to start <a href="{{ url_for('pages.page', path='projects') }}">cool projects</a> and contribute to <a href="https://github.com/Siecje">open source</a>.</p>
+    <p>And I share <a href="{{ url_for('all_posts') }}">my thoughts</a> about it.</p>
+    <p>This site was created using <a href="https://github.com/siecje/htmd">htmd</a> a static site generator I created using Python. Usually I create Single Page Applications and leverage front-end frameworks, however this site doesn't use any front-end framework or even JavaScript. All of the functionality is done with good old HTML and CSS. The off screen menu uses the <code>:target</code> CSS selector.</p>
   </article>
   <article>
   <h2 class="title-color">Recent Blog Posts</h2>

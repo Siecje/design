@@ -1,0 +1,25 @@
+{% extends '_layout.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block meta_tags %}
+  {{ super() }}
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ url_for('pages.page', path='projects') }}">
+  <meta property="og:title" content="Projects">
+  <meta property="og:description" content="Cody Scott's Projects">
+{% endblock meta_tags %}
+
+{% block content %}
+  <article>
+    <h1>Projects</h1>
+    <div>
+      <div class="project-image">
+        <img src="{{ url_for('static', filename='htmd.png') }}" alt="htmd project being created">
+      </div>
+      <div class="project-text">
+        <p><strong>htmd</strong> is a static site generator that uses Jinja2 templates and markdown.</p>
+      </div>
+    </div>
+  </article>
+{% endblock content %}

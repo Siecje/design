@@ -218,7 +218,7 @@ footer li a {
 @media only screen and (min-width: 51em) {
   footer li {
     display: inline-block;
-    width: 33%;
+    width: 24%;
     border-top: none;
     padding: 0em;
     margin: 0em;
@@ -235,6 +235,10 @@ strong {
 
 em {
   font-style: italic;
+}
+
+pre, code {
+  font-family: monospace;
 }
 
 .link {
@@ -254,8 +258,12 @@ em {
   font-size: 5em;
 }
 
-#bitbucket-icon {
+.fa-bitbucket {
   color: #205081;
+}
+
+.fa-twitter {
+  color: #55acee;
 }
 
 .post-preview-link {
@@ -311,6 +319,16 @@ a:visited {
 }
 
 .post-list-item-tags {
+  display: inline-block;
+  float: right;
+}
+
+.project-image {
+  display: inline-block;
+  width: 10%;
+}
+
+.project-text {
   display: inline-block;
   float: right;
 }

@@ -1,13 +1,14 @@
 copy to clipboard in html5
 put gravatar in bottom of nav
 only put ads on posts
-one class to remove link styles (use reset)
-remove footer?
-add header bar with footer links and icons?
 remove email from footer and create a contact page.
 hover on icons
 format the source
+2x2 footer
+fix footer when skinny overlap menu
+
 
 things people want to know about me
 which editor do you use
 operating system.
+

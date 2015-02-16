@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href="{{ url_for('static', filename='reset.css') }}" rel="stylesheet">
   <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+  <link href="{{ url_for('pygments_css') }}" rel="stylesheet">
   <link href="{{ url_for('feed') }}" rel="alternate" title="{{ SITE_NAME }}" type="application/atom+xml">
 </head>
 <body>
@@ -31,9 +32,9 @@
     <ul id="nav-list">
       {% block menu %}
       <li><a href="{{ url_for('index') }}">Home</a></li>
-      <li><a href="{{ url_for('all_posts') }}">Posts</a></li>
-      <li><a href="{{ url_for('all_tags') }}">Tags</a></li>
-      <li><a href="{{ url_for('pages.page', path='about') }}">About</a></li>
+      <li><a href="{{ url_for('pages.page', path='projects') }}">Projects</a></li>
+      <li><a href="{{ url_for('all_posts') }}">Blog Posts</a></li>
+      <li><a href="{{ url_for('all_tags') }}">Blog Tags</a></li>
       {% endblock menu %}
     </ul>
   </nav>
@@ -50,9 +51,10 @@
     <footer>
       {% block footer %}
       <ul>
-        <li><a href="https://github.com/" class="link" target="_blank"><i class="fa fa-github icon"></i></a></li>
-        <li>email@example.com (<a href="mailto:email@example.com">mailto</a>)</li>
-        <li><a href="https://bitbucket.org/" id="bitbucket-icon" class="link" target="_blank"><i class="fa fa-bitbucket icon"></i></a></li>
+        <li><a href="https://github.com/Siecje" class="link" target="_blank"><i class="fa fa-github icon"></i></a></li>
+        <li><a href="mailto:cody.j.b.scott@gmail.com"><i class="fa fa-envelope icon"></i></li>
+        <li><a href="https://twitter.com/Siecje" target="_blank"><i class="fa fa-twitter icon"></i></a></li>
+        <li><a href="https://bitbucket.org/Siecje" id="bitbucket-icon" class="link" target="_blank"><i class="fa fa-bitbucket icon"></i></a></li>
       </ul>
       {% endblock footer %}
     </footer>
