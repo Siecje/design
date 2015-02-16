@@ -325,10 +325,11 @@ a:visited {
 
 .project-image {
   display: inline-block;
-  width: 10%;
+  width: 40%;
+  float: left;
 }
 
 .project-text {
-  display: inline-block;
-  float: right;
+  overflow: hidden;
+  padding-left: 1em;
 }

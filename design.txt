@@ -6,7 +6,7 @@ hover on icons
 format the source
 2x2 footer
 fix footer when skinny overlap menu
-
+projects page layout
 
 things people want to know about me
 which editor do you use
