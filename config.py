@@ -1,12 +1,12 @@
-SITE_NAME = 'HTMD'
-SITE_URL = ''
+SITE_NAME = 'Cody Scott'
+SITE_URL = 'http://siecje.github.io'
 
 ### Optional Settings ###
 SITE_LOGO = ''
 
 SITE_DESCRIPTION = ''
 # @site_username
-SITE_TWITTER = ''
+SITE_TWITTER = '@Siecje'
 # URL of a Facebook page
 SITE_FACEBOOK = ''
 # Unique Facebook ID used for platforminsights
@@ -22,9 +22,9 @@ BUILD_FOLDER = 'build'
 POSTS_EXTENSION = '.md'
 
 # Show author and date at the top of every post?
-SHOW_AUTHOR = True
+SHOW_AUTHOR = False
 # Author to use if author is not specified in post file
-DEFAULT_AUTHOR = ''
+DEFAULT_AUTHOR = 'Cody Scott'
 # @twitter_username
-DEFAULT_AUTHOR_TWITTER = ''
+DEFAULT_AUTHOR_TWITTER = '@Siecje'
 DEFAULT_AUTHOR_FACEBOOK = ''

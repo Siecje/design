@@ -5,3 +5,5 @@ updated: 2014-10-30
 tags: [first]
 
 This is the post **text**.
+This **is** the post *text*.
+[link](http://www.google.com)

@@ -20,7 +20,7 @@ img {
 
 body {
   font-size: 100%;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 h1 {
@@ -81,15 +81,23 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 1em 0;
 }
 
+header {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 2em;
+}
+
+/* Nav Menu */
 nav ul {
   list-style-type: none;
   padding: 0;
 }
 
 nav li {
-  border: 1px solid #666;
-  background-color: #eee;
+  border: 1px solid #b2dfdb;
   text-align: center;
+  background-color: #26a69a;
 }
 
 nav li a {
@@ -97,6 +105,7 @@ nav li a {
   text-decoration: none;
   font-size: 1.2em;
   padding: 10px 1em;
+  color: #e0f2f1;
 }
 
 nav ul {
@@ -112,7 +121,8 @@ nav ul {
   left: 0;
   height: 100%;
   transition: width 0.3s ease;
-  background-color: blue;
+  background-color: #e0f2f1;
+  border: 1px solid #666;
 }
 
 #nav:target {
@@ -128,22 +138,37 @@ nav ul {
 }
 
 #nav:target + #fullpage > header > #nav-hide {
-  display: block;
+  display: inline-block;
 }
 
 .menu-icon {
   font-size: 2em;
   text-decoration: none;
+  color: black;
 }
 
 .menu-icon:visited {
   color: black;
 }
 
+.logo {
+  font-size: 2em;
+}
+
+#nav-list {
+  padding-top: 1em;
+}
+
 /* Display menu on the left side when screen is wide enough */
 @media only screen and (min-width: 30em) {
   #nav-hide-small {
     display: none;
+  }
+  #nav-logo {
+    display: none;
+  }
+  #nav-list {
+    padding-top: 0;
   }
   #nav:target {
     width: 20%;
@@ -206,4 +231,86 @@ footer li a {
 
 strong {
   font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.link {
+  text-decoration: none;
+  color: #009688;
+}
+
+.link:visited {
+  color :black;
+}
+
+.link-hover:hover {
+  color: #009688;
+}
+
+.icon {
+  font-size: 5em;
+}
+
+#bitbucket-icon {
+  color: #205081;
+}
+
+.post-preview-link {
+  text-decoration: none;
+  color: black;
+}
+
+.post-preview-link:visited {
+  color: black;
+}
+
+a {
+  color: #009688;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #004d40;
+}
+
+.post-title:hover {
+  color: #009688;
+}
+
+.tag:visited {
+  color: black;
+}
+
+.tag {
+  background-color: #009688;
+  padding: 0.5em 0.5em;
+  text-decoration: none;
+  color: black;
+}
+
+.intro {
+  border: 1px solid #d9d9d9;
+  background-color: #f7f9f9;
+}
+
+.title-color {
+  color: #009688;
+}
+
+.post-list-item-date {
+  display: inline-block;
+}
+
+.post-list-item-title {
+  display: inline-block;
+  text-align: center;
+  width: 70%;
+}
+
+.post-list-item-tags {
+  display: inline-block;
+  float: right;
 }

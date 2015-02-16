@@ -19,16 +19,16 @@
       <meta name="twitter:site" content="{{ SITE_TWITTER }}">
     {% endif %}
   {% endblock meta_tags %}
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-  {% if INCLUDE_CSS %}
-    <link href="{{ url_for('static', filename='combined.min.css') }}" rel="stylesheet" type="text/css">
-  {% endif %}
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="{{ url_for('static', filename='reset.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
   <link href="{{ url_for('feed') }}" rel="alternate" title="{{ SITE_NAME }}" type="application/atom+xml">
 </head>
 <body>
   <nav id="nav" role="navigation">
     <a id="nav-hide-small" href="#close" class="menu-icon">&#9776;</a>
-    <ul>
+    <span id="nav-logo" class="logo"><a href="{{ url_for('index') }}" class="link link-hover">Cody Scott</a></span>
+    <ul id="nav-list">
       {% block menu %}
       <li><a href="{{ url_for('index') }}">Home</a></li>
       <li><a href="{{ url_for('all_posts') }}">Posts</a></li>
@@ -39,8 +39,9 @@
   </nav>
   <div id="fullpage">
     <header>
-      <a id="nav-show" href="#nav" class="menu-icon">&#9776;</a>
-      <a id="nav-hide" href="#close" class="menu-icon">&#9776;</a>
+        <a id="nav-show" href="#nav" class="menu-icon">&#9776;</a>
+        <a id="nav-hide" href="#close" class="menu-icon">&#9776;</a>
+        <span class="logo"><a href="{{ url_for('index') }}" class="link link-hover">Cody Scott</a></span>
     </header>
 
     {% block content %}
@@ -49,9 +50,9 @@
     <footer>
       {% block footer %}
       <ul>
-        <li><a href="mailto:email@example.com">email@example.com</a></li>
-        <li><a href="https://github.com/" target="_blank">GitHub Profile</a></li>
-        <li><a href="https://bitbucket.org/" target="_blank">BitBucket Profile</a></li>
+        <li><a href="https://github.com/" class="link" target="_blank"><i class="fa fa-github icon"></i></a></li>
+        <li>email@example.com (<a href="mailto:email@example.com">mailto</a>)</li>
+        <li><a href="https://bitbucket.org/" id="bitbucket-icon" class="link" target="_blank"><i class="fa fa-bitbucket icon"></i></a></li>
       </ul>
       {% endblock footer %}
     </footer>
