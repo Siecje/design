@@ -1,0 +1,71 @@
+(11:27:43 PM) zakbach: menu animation is not smooth, moves the menu icon (hamburger icon from place) which means not good UX at all
+(11:27:47 PM) zakbach: second of all, spacing is all wrong
+(11:27:52 PM) zakbach: not-even
+(11:28:17 PM) zakbach: for example, the blue container box with your description in it has more padding on the top and bottom than on left and right
+(11:28:44 PM) zakbach: another thing, your recent blog posts collides with the social icons in a way that it all looks so very broken
+(11:28:47 PM) zakbach: separate the two sections
+(11:29:00 PM) zakbach: having a tooltip on social icon hover is not needed imo
+(11:29:21 PM) zakbach: dont center the menu text, align it left
+(11:29:26 PM) zakbach: and use a better color scheme
+(11:30:32 PM) Siecje: Yeah when the menu is being closed the menu items stretch down when the width is small. I don't know how to fix that.
+(11:30:53 PM) Siecje: zakbach: What do you mean the menu icon moves?
+(11:31:02 PM) Siecje: zakbach: No this is good feedback
+(11:31:03 PM) zakbach: as in I click on the icon, it moves to right
+(11:31:08 PM) sexywoodenspoon: Have it off the page at full width and slide it on when ready
+(11:31:28 PM) pingu17: zakbach knows his stuff
+(11:31:35 PM) sexywoodenspoon: Rather than using left as a hard stop, change your index.
+(11:31:48 PM) sexywoodenspoon: Oh I know, just making light of the humour
+(11:32:01 PM) sexywoodenspoon: Or rather injecting humour.
+(11:32:19 PM) Siecje: sexywoodenspoon: What do you mean by change your index? z-index?
+(11:32:35 PM) zakbach: i'd also look into typography a bit, and assuming you use such a bit font because you have a big resolution screen, also look into scaling font size based on viewport size
+(11:32:42 PM) zakbach: because I'm on 1280x800 and the font is massive for me
+(11:33:15 PM) pingu17: here, minor changes http://webgel.net/bf/screen1.jpg
+(11:34:11 PM) zakbach: Siecje, a lot of stuff I mentioned, but covered in more detail can be found in this article: https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda
+(11:34:23 PM) zakbach: it's aimed for developers
+(11:34:30 PM) zakbach: so they'd know what proper spacing is
+(11:34:32 PM) zakbach: and so forth
+(11:34:36 PM) pingu17: zakbach: do you agree spacing in the above screen is better?
+(11:35:05 PM) zakbach: looks identical to me
+(11:35:10 PM) pingu17: interesting
+(11:35:13 PM) zakbach: I'm not talking of font spacing
+(11:35:17 PM) MJCD_: Is that "interesting"
+(11:35:18 PM) MJCD_: lol
+(11:35:19 PM) pingu17: i wasn't either
+(11:35:36 PM) zakbach: look pingu17 http://i.imgur.com/PRd5gn2.png
+(11:35:45 PM) zakbach: more space on top than on left
+(11:35:46 PM) zakbach: not-even
+(11:35:49 PM) zakbach: or rather, uneven
+(11:35:59 PM) pingu17: with you, yep
+(11:36:16 PM) zakbach: well you made the piccy
+(11:36:25 PM) pingu17: menu icon top left, space between that and the title
+(11:36:43 PM) pingu17: bg color made fbfbfb, color #333
+(11:36:53 PM) zakbach: I'm a fan of mathematically perfect designs
+(11:36:54 PM) pingu17: first button is slightly different
+(11:37:19 PM) zakbach: as in, no odd pixels, no uneven spacing or too tight spacing
+(11:37:25 PM) pingu17: me too. don't know if it's maths or just visual balance. nice to imagine there is some mathematical reason
+(11:37:36 PM) zakbach: it is math, because it's symmetry
+(11:37:50 PM) pingu17: maybe. golden ratios or something
+(11:38:39 PM) sexywoodenspoon: Golden ratios indeed
+(11:38:57 PM) Siecje: How should the footer be separate from the blog posts?
+(11:40:22 PM) sexywoodenspoon left the room (quit: Quit: Leaving).
+(11:41:36 PM) zakbach: i'd say if the spacing is 25px, then if you must, or where it fits, double it or triple it, but never use something like 12px, or 8px
+(11:42:01 PM) zakbach: and definitely don't use 8.5px
+(11:42:19 PM) zakbach: Siecje, usually with a divider
+(11:42:32 PM) Siecje: <hr>?
+(11:42:41 PM) zakbach: well, sure
+(11:42:48 PM) zakbach: but style it at least
+(11:44:35 PM) Siecje: zakbach: the font-size does scale, you think it is too large?
+(11:44:59 PM) zakbach: for me, yes
+(11:45:55 PM) zakbach: also in your test post: http://siecje.github.io/2014/10/30/example/
+(11:45:58 PM) zakbach: i can't tell it's a link there
+(11:46:14 PM) zakbach: give the links in post content a border-bottom or something
+(11:46:22 PM) zakbach: or make the color blue-ish, or green-ish
+(11:46:23 PM) MJCD_Detached is now known as MJCD
+(11:46:26 PM) zakbach: but so it pops out
+(11:46:39 PM) Siecje: Isn't it greenish bluish?
+(11:46:46 PM) zakbach: yea but it's dark
+(11:46:51 PM) zakbach: barely visible next to the other text
+(11:47:03 PM) Siecje: but not text-decoration?
+(11:47:27 PM) zakbach: I prefer border-bottom, with that I can lower the border with line-height
+(11:47:32 PM) zakbach: can't do that with text-decoration
+(11:47:36 PM) zakbach: but you can use that, too, yes

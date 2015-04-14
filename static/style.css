@@ -7,10 +7,10 @@
   max-width: 63em;
   margin: auto;
   width: 100%;
+  background-color: #fdfdfd;
 }
 
 article {
-  padding: 10px 1em;
   margin: 0 5% 10px;
 }
 
@@ -40,6 +40,7 @@ p {
   font-size: 1em;
   margin: 5px 0;
   line-height: 1.2;
+  font-color: #333;
 }
 
 @media screen and (min-width: 25em) {
@@ -48,7 +49,7 @@ p {
   }
 }
 
-@media screen and (min-width: 25em) {
+@media screen and (min-width: 40em) {
   article {
     font-size: 1.2em;
   }
@@ -77,8 +78,12 @@ body {
   overflow-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6{
   margin: 1em 0;
+}
+
+p {
+  margin: 1em 1em;
 }
 
 header {
@@ -86,6 +91,12 @@ header {
   padding-bottom: 2em;
   border-bottom: 1px solid #d9d9d9;
   margin-bottom: 2em;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  padding-left: 0.5em;
 }
 
 /* Nav Menu */
@@ -102,6 +113,7 @@ nav li {
 
 nav li a {
   display: block;
+  /*text-align: left;*/
   text-decoration: none;
   font-size: 1.2em;
   padding: 10px 1em;
@@ -123,6 +135,7 @@ nav ul {
   transition: width 0.3s ease;
   background-color: #e0f2f1;
   border: 1px solid #666;
+  padding-top: 2em;
 }
 
 #nav:target {
@@ -141,19 +154,7 @@ nav ul {
   display: inline-block;
 }
 
-.menu-icon {
-  font-size: 2em;
-  text-decoration: none;
-  color: black;
-}
 
-.menu-icon:visited {
-  color: black;
-}
-
-.logo {
-  font-size: 2em;
-}
 
 #nav-list {
   padding-top: 1em;
@@ -202,15 +203,12 @@ footer li a {
   text-decoration: none;
 }
 
-/* Modify footer breakpoint when menu is open */
-@media only screen and (min-width: 51em) and (max-width: 62em){
-  #nav:target + #fullpage > footer li{
-    border-top: 1px solid #666;
-    display: block;
-    padding: 10px 1em;
-    margin: 3px 0 0;
-    text-align: center;
-    width: 100%;
+/* 2x2 footer */
+@media only screen and (min-width: 20em) {
+  footer li {
+    display: inline;
+    width: 50%;
+    float: left;
   }
 }
 
@@ -256,14 +254,33 @@ pre, code {
 
 .icon {
   font-size: 5em;
+  z-index: -1;
+  display: block;
+}
+
+.fa-github {
+  color: #333;
+}
+
+.fa-twitter {
+  color: #55acee;
 }
 
 .fa-bitbucket {
   color: #205081;
 }
 
-.fa-twitter {
-  color: #55acee;
+.tooltip{
+		display: inline;
+		position: relative;
+}
+
+.tooltip:hover:after{
+		background: rgba(0,0,0,.8);
+		color: #fff;
+		content: attr(data-tooltip);
+		padding: 5px 15px;
+		z-index: 98;
 }
 
 .post-preview-link {
@@ -296,7 +313,7 @@ a:visited {
   background-color: #009688;
   padding: 0.5em 0.5em;
   text-decoration: none;
-  color: black;
+  color: #fdfdfd;
 }
 
 .intro {
@@ -310,6 +327,7 @@ a:visited {
 
 .post-list-item-date {
   display: inline-block;
+  font-weight: bold;
 }
 
 .post-list-item-title {
@@ -333,3 +351,15 @@ a:visited {
   overflow: hidden;
   padding-left: 1em;
 }
+
+.menu-icon {
+  font-size: 2em;
+  text-decoration: none;
+  color: black;
+}
+
+.menu-icon:visited {
+  color: black;
+}
+
+

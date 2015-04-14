@@ -1,14 +1,6 @@
-copy to clipboard in html5
-put gravatar in bottom of nav
-only put ads on posts
-remove email from footer and create a contact page.
-hover on icons
-format the source
-2x2 footer
-fix footer when skinny overlap menu
+copy to email clipboard in html5
+put gravatar in bottom of nav background-image?
+scroll with menu when viewport is skinny
 projects page layout
-
-things people want to know about me
-which editor do you use
-operating system.
+post page before ad
 

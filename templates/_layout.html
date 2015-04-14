@@ -4,21 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>{% block title %}{% endblock title %} | {{SITE_NAME}}</title>
-  {% block meta_tags %}
-    <meta property="og:site_name" content="{{ SITENAME }}">
+  {%- block meta_tags -%}
+    {%- if SITE_NAME -%}
+      <meta property="og:site_name" content="{{ SITE_NAME }}">
+    {% endif -%}
     {# Facebook specific Tags #}
-    {% if FACEBOOK_APP_ID %}
+    {%- if FACEBOOK_APP_ID -%}
       <meta property="fb:app_id" content="{{ FACEBOOK_APP_ID }}">
-    {% endif %}
-    {% if SITE_FACEBOOK %}
+    {%- endif -%}
+    {%- if SITE_FACEBOOK -%}
       <meta property="article:publisher" content="{{ SITE_FACEBOOK }}">
-    {% endif %}
-
-    {% if SITE_TWITTER %}
+    {%- endif -%}
+    {%- if SITE_TWITTER -%}
       <meta name="twitter.card" content="summary">
       <meta name="twitter:site" content="{{ SITE_TWITTER }}">
-    {% endif %}
-  {% endblock meta_tags %}
+    {%- endif -%}
+  {%- endblock meta_tags -%}
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href="{{ url_for('static', filename='reset.css') }}" rel="stylesheet">
   <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
@@ -51,16 +52,22 @@
     <footer>
       {% block footer %}
       <ul>
-        <li><a href="https://github.com/Siecje" class="link" target="_blank"><i class="fa fa-github icon"></i></a></li>
-        <li><a href="mailto:cody.j.b.scott@gmail.com"><i class="fa fa-envelope icon"></i></li>
-        <li><a href="https://twitter.com/Siecje" target="_blank"><i class="fa fa-twitter icon"></i></a></li>
-        <li><a href="https://bitbucket.org/Siecje" id="bitbucket-icon" class="link" target="_blank"><i class="fa fa-bitbucket icon"></i></a></li>
+        <li><a href="https://github.com/Siecje" data-tooltip="GitHub Profile" class="link tooltip" target="_blank"><i class="fa fa-github icon" title="GitHub Profile"></i></a></li>
+        <li><a href="mailto:cody.j.b.scott@gmail.com" data-tooltip="Email" class="tooltip"><i class="fa fa-envelope icon"></i></a></li>
+        <li><a href="https://twitter.com/Siecje" data-tooltip="Twitter" class="tooltip" target="_blank"><i class="fa fa-twitter icon"></i></a></li>
+        <li><a href="https://bitbucket.org/Siecje" data-tooltip="BitBucket Profile" class="link tooltip" target="_blank"><i class="fa fa-bitbucket icon"></i></a></li>
       </ul>
       {% endblock footer %}
     </footer>
   </div>
-  {% if INCLUDE_JS %}
-    <script src="{{ url_for('static', filename='combined.min.js') }}"></script>
-  {% endif %}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-8394186-3', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
 </html>
